@@ -26,8 +26,7 @@ export default function feedback(correct, guess) {
         // If right letter in wrong place, set results to "misplaced" and "found"
         else if (
           correctLetter.letter === guessLetter.letter &&
-          correctLetter.result !== "correct" &&
-          correctLetter.result !== "found" &&
+          correctLetter.result == "null" &&
           guessLetter.result !== "correct"
         ) {
           correctLetter.result = "found";
@@ -55,6 +54,7 @@ export default function feedback(correct, guess) {
     });
 
     // DEV
+    //console.log(correctArr);
     //console.log(guessArr);
 
     return guessArr;
