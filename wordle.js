@@ -27,6 +27,10 @@ function feedback(correct, guess) {
         correctLetter.result = "found";
         guessLetter.result = "misplaced";
       }
+      // If wrong letter
+      else if (guessLetter.result === "null") {
+        guessLetter.result = "incorrect";
+      }
     });
   });
 
@@ -34,4 +38,4 @@ function feedback(correct, guess) {
   console.log(correctArr);
 }
 
-feedback("birdy", "bidry");
+feedback("birdy", "birty");
