@@ -22,13 +22,29 @@ function feedback(correct, guess) {
       // If right letter in wrong place, set results to "misplaced" and "found"
       else if (
         correctLetter.letter === guessLetter.letter &&
-        correctLetter.id !== guessLetter.id
+        correctLetter.result !== "correct" &&
+        correctLetter.result !== "found" &&
+        guessLetter.result !== "correct"
       ) {
         correctLetter.result = "found";
         guessLetter.result = "misplaced";
       }
-      // If wrong letter
+      // If wrong letter, set result to "incorrect"
       else if (guessLetter.result === "null") {
+        guessLetter.result = "incorrect";
+      }
+    });
+  });
+
+  // Loop through a second time to fix "misplaced" errors steming from
+  // multiples of same letter in guess
+  correctArr.forEach((correctLetter) => {
+    guessArr.forEach((guessLetter) => {
+      if (
+        guessLetter.result === "misplaced" &&
+        correctLetter.result !== "found" &&
+        guessLetter.letter === correctLetter.letter
+      ) {
         guessLetter.result = "incorrect";
       }
     });
@@ -38,4 +54,4 @@ function feedback(correct, guess) {
   console.log(correctArr);
 }
 
-feedback("birdy", "birty");
+feedback("cykla", "jacka");
