@@ -1,4 +1,4 @@
-export function feedback(correct, guess) {
+function feedback(correct, guess) {
   if (correct.length === guess.length) {
     // Create arrays and map with propertys
     const correctArr = Array.from(correct).map((letter, index) => {
@@ -51,12 +51,11 @@ export function feedback(correct, guess) {
       });
     });
 
-    console.log(guessArr);
-    console.log(correctArr);
-
     return guessArr;
   } else {
     console.log("ERROR! The words must be the same length!");
   }
 }
 feedback("cykla", "hallå");
+
+module.exports = feedback;
