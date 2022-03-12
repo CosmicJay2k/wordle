@@ -1,5 +1,5 @@
-const { test, expect } = require("@jest/globals");
-const feedback = require("./wordle");
+import { test, expect } from "@jest/globals";
+import feedback from "./wordle.js";
 
 // Check to see that the function runs when two words of the same length are given
 test("function runs when both words are the same length", () => {

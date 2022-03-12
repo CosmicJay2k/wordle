@@ -1,4 +1,4 @@
-function feedback(correct, guess) {
+export default function feedback(correct, guess) {
   if (correct.length === guess.length) {
     // Create arrays and map with properties
     const correctArr = Array.from(correct).map((letter, index) => {
@@ -57,5 +57,3 @@ function feedback(correct, guess) {
   }
 }
 feedback("cykla", "hallå");
-
-module.exports = feedback;
