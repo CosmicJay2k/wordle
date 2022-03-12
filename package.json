@@ -1,0 +1,22 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "description": "a wordle clone",
+  "main": "wordle.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CosmicJay2k/wordle.git"
+  },
+  "author": "John Tannenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CosmicJay2k/wordle/issues"
+  },
+  "homepage": "https://github.com/CosmicJay2k/wordle#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
