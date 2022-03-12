@@ -19,6 +19,14 @@ function feedback(correct, guess) {
         correctLetter.result = "correct";
         guessLetter.result = "correct";
       }
+      // If right letter in wrong place, set results to "misplaced" and "found"
+      else if (
+        correctLetter.letter === guessLetter.letter &&
+        correctLetter.id !== guessLetter.id
+      ) {
+        correctLetter.result = "found";
+        guessLetter.result = "misplaced";
+      }
     });
   });
 
@@ -26,4 +34,4 @@ function feedback(correct, guess) {
   console.log(correctArr);
 }
 
-feedback("birdy", "birdy");
+feedback("birdy", "bidry");
