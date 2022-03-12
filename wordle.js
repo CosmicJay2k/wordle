@@ -65,4 +65,4 @@ export default function feedback(correct, guess) {
 }
 
 // Run
-feedback(wordPicker(listOfWords, 5, true), "träsk");
+feedback(wordPicker(listOfWords, 5, false), "hallå");
