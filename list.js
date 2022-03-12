@@ -1,1 +1,9 @@
-export const listOfWords = ["älska", "hatar", "träsk", "allvarligt", "vadar"];
+export const listOfWords = [
+  "älska",
+  "halar",
+  "träsk",
+  "allvarligt",
+  "vadar",
+  "cykla",
+  "hålla",
+];
