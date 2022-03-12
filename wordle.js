@@ -53,6 +53,8 @@ export function feedback(correct, guess) {
 
     console.log(guessArr);
     console.log(correctArr);
+
+    return guessArr;
   } else {
     console.log("ERROR! The words must be the same length!");
   }
