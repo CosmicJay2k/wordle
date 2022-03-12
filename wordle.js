@@ -1,3 +1,6 @@
+import { wordPicker } from "./picker.js";
+import { listOfWords } from "./list.js";
+
 export default function feedback(correct, guess) {
   if (correct.length === guess.length) {
     // Create arrays and map with properties
@@ -51,9 +54,15 @@ export default function feedback(correct, guess) {
       });
     });
 
+    // DEV
+    console.log(guessArr);
+
     return guessArr;
   } else {
+    // DEV
     console.log("ERROR! The words must be the same length!");
   }
 }
-feedback("cykla", "hallå");
+
+// Run
+feedback(wordPicker(listOfWords, 5, true), "träsk");
