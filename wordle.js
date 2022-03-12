@@ -55,7 +55,7 @@ export default function feedback(correct, guess) {
     });
 
     // DEV
-    console.log(guessArr);
+    //console.log(guessArr);
 
     return guessArr;
   } else {
