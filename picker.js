@@ -22,7 +22,7 @@ export function wordPicker(list, nr, uniqueOrNot) {
   if (chosenWord === undefined) {
     chosenWord = "Det finns tyvärr inget ord som passar!";
   }
-  console.log(chosenWord);
+
   return chosenWord;
 }
 
